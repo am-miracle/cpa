@@ -1,8 +1,8 @@
-/*
+
 #[test_only]
-module cpa::cpa_tests;
+module cpa::project_tests;
 // uncomment this line to import the module
-// use cpa::cpa;
+// use cpa::project_manager;
 
 const ENotImplemented: u64 = 0;
 
@@ -11,8 +11,8 @@ fun test_cpa() {
     // pass
 }
 
-#[test, expected_failure(abort_code = ::cpa::cpa_tests::ENotImplemented)]
+#[test, expected_failure(abort_code = ::cpa::project_tests::ENotImplemented)]
 fun test_cpa_fail() {
     abort ENotImplemented
 }
-*/
+

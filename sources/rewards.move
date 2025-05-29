@@ -25,7 +25,6 @@ module cpa::rewards;
 
     // ====== Public Functions ======
 
-    /// Initialize a new reward pool for a project
     public fun create_reward_pool<T>(
         project_owner: &mut TxContext,
         project: &Project,
@@ -64,7 +63,7 @@ module cpa::rewards;
         assert!(coin::value(&reward_coin) == amount, E_NOT_ENOUGH_REWARDS);
         transfer::public_transfer(reward_coin, recipient);
 
-        // Emit receipt (optional)
+        // Emit receipt
         let receipt = RewardReceipt {
             id: object::new(ctx),
             amount

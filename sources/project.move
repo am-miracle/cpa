@@ -18,7 +18,7 @@ module cpa::project_manager;
     public struct Task has store {
         id: ID,
         name: String,
-        duration: u64,       // Duration in hours
+        duration: u64,
         start_time: u64,     // Set by off-chain CPA
         end_time: u64,       // Set by off-chain CPA
         is_critical: bool,   // Set by off-chain CPA
